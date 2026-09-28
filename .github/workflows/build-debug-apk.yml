@@ -59,7 +59,7 @@ jobs:
         run: cp -r ${{ github.workspace }}/libs ${{ github.workspace }}/V2rayNG/app
 
       - name: Download prebuilt Xray-core AAR
-        uses: robinraju/release-downloader@v1.9
+        uses: robinraju/release-downloader@v1.13
         with:
           repository: '2dust/AndroidLibXrayLite'
           latest: true

@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -95,11 +96,13 @@ fun MainBottomBar(
                 }
                 onAction(MainAction.ToggleService)
             },
+            shape = CircleShape,
             modifier = Modifier
                 .align(Alignment.TopEnd)
                 .padding(end = 24.dp)
-                .offset(y = (-28).dp)
-                .navigationBarsPadding(),
+                .offset(y = (-40).dp)
+                .navigationBarsPadding()
+                .size(80.dp),
             containerColor = if (isRunning) colorFabActive
             else if (isDarkTheme) colorFabInactiveDark
             else colorFabInactiveLight
@@ -112,7 +115,7 @@ fun MainBottomBar(
                 ),
                 tint = Color.White,
                 modifier = Modifier
-                    .size(24.dp)
+                    .size(36.dp)
                     .graphicsLayer { rotationZ = rotationAnim.value }
             )
         }

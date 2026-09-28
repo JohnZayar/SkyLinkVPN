@@ -74,7 +74,7 @@ jobs:
           ./gradlew assemblePlaystoreDebug
 
       - name: Upload APK(s) as workflow artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: SkyLinkVPN-debug-apk
           path: V2rayNG/app/build/outputs/apk/**/*.apk

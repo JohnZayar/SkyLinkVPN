@@ -19,7 +19,7 @@ jobs:
         run: git clone --recursive --depth 1 https://github.com/heiher/hev-socks5-tunnel.git hev-socks5-tunnel
 
       - name: Setup Java
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v6
         with:
           distribution: 'temurin'
           java-version: '21'
